@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 950178896}
   - component: {fileID: 950178895}
   - component: {fileID: 950178894}
+  - component: {fileID: 950178897}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -212,6 +213,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &950178897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950178893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17897d6d37f253d4bbe4bf9a66a0097e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 950178895}
 --- !u!1 &1406404637
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,7 +476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2140745327}
   - component: {fileID: 2140745326}
-  - component: {fileID: 2140745325}
+  - component: {fileID: 2140745328}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -470,25 +484,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2140745325
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2140745324}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91f68a91131bb144c82061368d33e416, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: {fileID: 1720550282}
-  nextState: {fileID: 1406404638}
-  aliveTile: {fileID: 11400000, guid: 3f48930c8b7fdc547a21ba3bfec54ac9, type: 2}
-  runningColor: {r: 0, g: 0, b: 0, a: 0}
-  pauseColor: {r: 0, g: 0, b: 0, a: 0}
-  isBackground: 1
-  updateInterval: 0.5
 --- !u!156049354 &2140745326
 Grid:
   m_ObjectHideFlags: 0
@@ -518,6 +513,29 @@ Transform:
   - {fileID: 1406404640}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2140745328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140745324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d180c9eeacc369429d69b2f41f93c19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: {fileID: 1720550282}
+  nextState: {fileID: 1406404638}
+  playerOneTile: {fileID: 11400000, guid: 7862a9adcfcc2804ba756606adc77dc5, type: 2}
+  playerTwoTile: {fileID: 11400000, guid: 845464ada8926c343b1d7cb5f758dfe2, type: 2}
+  borderTile: {fileID: 11400000, guid: 3f48930c8b7fdc547a21ba3bfec54ac9, type: 2}
+  limit: 50
+  runningColor: {r: 0, g: 0, b: 0, a: 0}
+  pauseFirstColor: {r: 0.4285333, g: 0.6344952, b: 0.8490566, a: 0}
+  pauseSecondColor: {r: 0.7830189, g: 0.41736382, b: 0.41736382, a: 0}
+  startingCredits: 50
+  updateInterval: 0.01
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
